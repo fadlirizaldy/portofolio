@@ -24,10 +24,10 @@ const Navbar = () => {
         <Link href={"/works"} className={`${router.asPath === "/works" && "text-primaryBtn"} hover:underline`}>
           Works
         </Link>
-        <Link href={"/"} className={`${router.asPath === "/blog" && "text-primaryBtn"} hover:underline`}>
+        <Link href={"/blog"} className={`${router.asPath === "/blog" && "text-primaryBtn"} hover:underline`}>
           Blog
         </Link>
-        <Link href={"/"} className={`${router.asPath === "/contact" && "text-primaryBtn"} hover:underline`}>
+        <Link href={"/contact"} className={`${router.asPath === "/contact" && "text-primaryBtn"} hover:underline`}>
           Contact
         </Link>
       </div>
