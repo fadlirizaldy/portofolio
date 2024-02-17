@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
     <MainLayout>
-      <div className="flex flex-col-reverse md:flex-row gap-10 md:gap-20 items-center justify-center py-12 max-w-[1200px] w-[90%] mx-auto">
+      <div className="flex flex-col-reverse md:flex-row gap-10 md:gap-20 items-center justify-center py-12 max-w-[1200px] w-[90%] mx-auto text-black">
         <section className="w-full md:w-1/2 dark:text-white">
           <h2 className="mb-2 text-2xl">
             Hi, I am <span className="text-primary dark:text-primaryBtn font-medium">{DataProfile.name}</span>
@@ -70,7 +70,7 @@ export default function Home() {
             <div className="w-2 h-8 bg-primary dark:bg-primaryBtn rounded-md"></div>
             <h3 className="font-medium text-xl text-secondary dark:text-primaryBtn italic">Experience</h3>
           </div>
-          <div className="flex sm:justify-center dark:text-white">
+          <div className="flex sm:justify-center text-black dark:text-white">
             <ul className="steps steps-vertical gap-2 relative sm:left-32 overflow-visible">
               <li data-content="★" className="step step-neutral flex justify-start">
                 <div className="flex flex-col items-start">
@@ -110,7 +110,7 @@ export default function Home() {
       <div className="h-full max-w-[1200px] w-[90%] mx-auto pt-3 pb-10">
         <h3 className="mb-3 font-medium text-xl text-secondary dark:text-primaryBtn italic">Featured works</h3>
 
-        <section className="flex flex-col divide-y-2 dark:text-white">
+        <section className="flex flex-col divide-y-2 text-black dark:text-white">
           <div className="flex flex-col md:flex-row gap-3 py-2">
             <img
               src="https://designsvalley.com/wp-content/uploads/2023/10/what-is-web-design.png"

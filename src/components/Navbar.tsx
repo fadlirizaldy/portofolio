@@ -14,17 +14,19 @@ const roboto = Roboto({
 const Navbar = () => {
   const router = useRouter();
   const [isShowMenu, setIsShowMenu] = useState(false);
-  const [width, setWidth] = useState(typeof window !== "undefined" ? window.innerWidth : 700);
+  const [width, setWidth] = useState<number | null>(null);
+  // typeof window !== "undefined" ? window.innerWidth : 700
+  const handleResize = () => {
+    setWidth(window.innerWidth);
+  };
 
   useEffect(() => {
-    const handleResize = () => {
-      setWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
   }, [width]);
 
   return (
@@ -42,7 +44,7 @@ const Navbar = () => {
         </div>
         <div
           className={`flex flex-col sm:flex-row absolute sm:static bg-white dark:bg-darkBg w-screen h-screen sm:h-fit sm:w-fit sm:py-0 py-6 top-16 -left-2 items-center gap-7 sm:gap-4 font-medium transition-all ${
-            width < 640 ? (isShowMenu ? "translate-x-2 opacity-100" : "opacity-0 pointer-events-none") : ""
+            width! < 640 ? (isShowMenu ? "translate-x-2 opacity-100" : "opacity-0 pointer-events-none") : ""
           }`}
         >
           <Link
