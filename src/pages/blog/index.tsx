@@ -4,7 +4,7 @@ import React from "react";
 
 const BlogPage = () => {
   return (
-    <MainLayout>
+    <MainLayout title="Blog | Fadli">
       <div className="max-w-[1200px] w-[90%] mx-auto">
         <NoData caption="Sorry, currently there's no article in here" />
       </div>
