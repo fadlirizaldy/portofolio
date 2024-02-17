@@ -2,6 +2,7 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: ["./src/pages/**/*.{js,ts,jsx,tsx,mdx}", "./src/components/**/*.{js,ts,jsx,tsx,mdx}", "./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
+  darkMode: "class",
   theme: {
     extend: {
       backgroundImage: {
@@ -15,6 +16,7 @@ const config: Config = {
         primaryBtn: "#296468",
         secondaryText: "#5B595A",
         dangerText: "#FF4949",
+        darkBg: "#121212",
       },
     },
   },

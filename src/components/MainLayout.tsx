@@ -16,7 +16,7 @@ const MainLayout = ({ children, title }: { children: React.ReactNode; title?: st
         <title>{title === undefined ? "My Portofolio | Fadli" : title}</title>
       </Head>
       <Navbar />
-      <div className="min-h-[90vh]">{children}</div>
+      <div className="min-h-[90vh] dark:bg-darkBg transition-all">{children}</div>
       <Footer />
     </>
   );
