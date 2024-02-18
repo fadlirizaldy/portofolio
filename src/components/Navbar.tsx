@@ -44,7 +44,11 @@ const Navbar = () => {
         </div>
         <div
           className={`flex flex-col sm:flex-row absolute sm:static bg-white dark:bg-darkBg w-screen h-screen sm:h-fit sm:w-fit sm:py-0 py-6 top-16 -left-2 items-center gap-7 sm:gap-4 font-medium transition-all ${
-            width! < 640 ? (isShowMenu ? "translate-x-2 opacity-100" : "opacity-0 pointer-events-none") : ""
+            width! < 640
+              ? isShowMenu
+                ? "translate-x-2 opacity-100"
+                : "opacity-0 pointer-events-none sm:pointer-events-auto sm:opacity-100"
+              : ""
           }`}
         >
           <Link
