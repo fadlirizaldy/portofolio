@@ -15,18 +15,18 @@ const Navbar = () => {
   const router = useRouter();
   const [isShowMenu, setIsShowMenu] = useState(false);
   const [width, setWidth] = useState<number | null>(null);
-  // typeof window !== "undefined" ? window.innerWidth : 700
-  const handleResize = () => {
-    setWidth(window.innerWidth);
-  };
 
   useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
     if (typeof window !== "undefined") {
+      console.log("HADNLE RESI", window.innerWidth);
       window.addEventListener("resize", handleResize);
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
     }
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, [width]);
 
   return (
@@ -34,7 +34,7 @@ const Navbar = () => {
       <div className="max-w-[1200px] w-[90%] mx-auto py-4 flex justify-center items-center sm:justify-between">
         <div
           className="flex justify-center absolute left-5 sm:hidden cursor-pointer transition-all"
-          onClick={() => setIsShowMenu(!isShowMenu)}
+          onClick={() => setIsShowMenu((prev) => !prev)}
         >
           <Icon icon={`${!isShowMenu ? "pajamas:hamburger" : "ic:round-close"}`} className="text-2xl" />
         </div>
@@ -44,7 +44,7 @@ const Navbar = () => {
         </div>
         <div
           className={`flex flex-col sm:flex-row absolute sm:static bg-white dark:bg-darkBg w-screen h-screen sm:h-fit sm:w-fit sm:py-0 py-6 top-16 -left-2 items-center gap-7 sm:gap-4 font-medium transition-all ${
-            width! < 640 && width !== null ? (isShowMenu ? "translate-x-2 opacity-100" : "opacity-0 pointer-events-none") : ""
+            width! < 640 ? (isShowMenu ? "translate-x-2 opacity-100" : "opacity-0 pointer-events-none") : ""
           }`}
         >
           <Link
