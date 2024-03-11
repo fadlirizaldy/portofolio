@@ -1,24 +1,32 @@
 import MainLayout from "@/components/MainLayout";
+import { Works } from "@/utils/data";
+import { DataType } from "@/utils/type";
 import { Icon } from "@iconify-icon/react/dist/iconify.mjs";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const WorkDetail = () => {
   const router = useRouter();
+  const [data, setData] = useState<DataType | null>(null);
   const { id } = router.query;
+
+  useEffect(() => {
+    if (router.isReady) {
+      setData(Works[Number(id)]);
+    }
+  }, []);
   return (
     <MainLayout>
       <div className="max-w-[1200px] w-[90%] mx-auto pt-7 relative">
-        <div className="absolute text-black top-4 flex items-center cursor-pointer" onClick={() => router.push("/works")}>
+        <div
+          className="absolute text-black top-4 flex items-center cursor-pointer"
+          onClick={() => router.push("/works")}
+        >
           <Icon icon="tabler:arrow-left" className="text-xl h-full" />
         </div>
         <div className="flex gap-10 mt-7 p-3 border border-slate-300 rounded-lg">
           <div className="w-80 max-h-56">
-            <img
-              src="https://designsvalley.com/wp-content/uploads/2023/10/what-is-web-design.png"
-              alt="project-img"
-              className="w-full h-full object-cover rounded-lg"
-            />
+            <img src={data?.image} alt="project-img" className="w-full h-full object-cover rounded-lg" />
           </div>
           <div className="w-[70%]">
             <div className="px-4 sm:px-0">

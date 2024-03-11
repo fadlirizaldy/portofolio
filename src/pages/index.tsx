@@ -1,16 +1,18 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import MainLayout from "@/components/MainLayout";
-import { DataProfile, Skill } from "@/utils/data";
+import { DataProfile, Skill, Works } from "@/utils/data";
 import { motion } from "framer-motion";
 import Template from "@/components/motion/Template";
 import TextTransition, { presets } from "react-text-transition";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 // const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const router = useRouter();
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -58,7 +60,10 @@ export default function Home() {
         <h2 className="text-center font-medium text-xl mb-2 dark:text-white">Skills</h2>
         <div className="flex items-center gap-5 overflow-x-scroll px-2">
           {Skill.map((data) => (
-            <div key={data.id} className="min-w-20 w-20 max-w-20 h-20 rounded-full border border-slate-100 overflow-hidden">
+            <div
+              key={data.id}
+              className="min-w-20 w-20 max-w-20 h-20 rounded-full border border-slate-100 overflow-hidden"
+            >
               <img src={data.url} alt={data.name} className="object-cover w-full h-full" />
             </div>
           ))}
@@ -111,42 +116,27 @@ export default function Home() {
         <h3 className="mb-3 font-medium text-xl text-secondary dark:text-primaryBtn italic">Featured works</h3>
 
         <section className="flex flex-col divide-y-2 text-black dark:text-white">
-          <div className="flex flex-col md:flex-row gap-3 py-2">
-            <img
-              src="https://designsvalley.com/wp-content/uploads/2023/10/what-is-web-design.png"
-              alt=""
-              className="rounded-lg min-w-32 w-full md:w-32 h-28 md:h-20 object-cover"
-            />
-            <div>
-              <h4 className="font-medium text-xl">Varmasea Web App</h4>
-              <div className="flex gap-4 items-center">
-                <p className="px-2 rounded-2xl bg-primaryBtn text-sm text-white">2024</p>
-                <p className="text-slate-500">Web Development</p>
+          {Works?.slice(0, 2).map((work) => (
+            <div
+              className="flex flex-col md:flex-row gap-3 py-2 cursor-pointer"
+              key={work.id}
+              onClick={() => router.push(`/works/${work.id}`)}
+            >
+              <img
+                src={work.image}
+                alt="Work Image"
+                className="rounded-lg min-w-32 w-full md:w-32 h-28 md:h-20 object-cover"
+              />
+              <div>
+                <h4 className="font-medium text-xl">{work.title}</h4>
+                <div className="flex gap-4 items-center">
+                  <p className="px-2 rounded-2xl bg-primaryBtn text-sm text-white">{work.year}</p>
+                  <p className="text-slate-500">{work.year}</p>
+                </div>
+                <p className="line-clamp-2 dark:font-thin">{work.description}</p>
               </div>
-              <p className="line-clamp-2 dark:font-thin">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, voluptate! Dolore, asperiores? Animi, labore architecto?
-                Aliquam illo quos vitae illum totam. Voluptatum voluptatem doloremque corporis expedita repudiandae, vero dolor illo?
-              </p>
             </div>
-          </div>
-          <div className="flex flex-col md:flex-row gap-3 py-2">
-            <img
-              src="https://gogo.co.id/wp-content/uploads/2021/12/Ketahui-Perbedaan-Website-Development-VS-Website-Design.jpg"
-              alt=""
-              className="rounded-lg min-w-32 w-full md:w-32 h-28 md:h-20 object-cover"
-            />
-            <div>
-              <h4 className="font-medium text-xl">Varmasea Web App</h4>
-              <div className="flex gap-4 items-center">
-                <p className="px-2 rounded-2xl bg-primaryBtn text-sm text-white">2024</p>
-                <p className="text-slate-500">Web Development</p>
-              </div>
-              <p className="line-clamp-2 dark:font-thin">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, voluptate! Dolore, asperiores? Animi, labore architecto?
-                Aliquam illo quos vitae illum totam. Voluptatum voluptatem doloremque corporis expedita repudiandae, vero dolor illo?
-              </p>
-            </div>
-          </div>
+          ))}
         </section>
         <Link
           href={"/works"}

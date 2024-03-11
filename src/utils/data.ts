@@ -1,3 +1,5 @@
+import { DataType } from "./type";
+
 export const DataProfile = {
   name: "Fadli Rizaldy",
   passion: ["Software Engineer", "Data Analyst", "Electronics Enthusiasts"],
@@ -71,7 +73,7 @@ export const Skill = [
   },
 ];
 
-export const works = [
+export const Works: DataType[] = [
   {
     id: 0,
     title: "Varmasea App",
@@ -83,6 +85,8 @@ export const works = [
       live: "-",
     },
     tech_stack: ["Next js", "Typescript", "Tailwind CSS", "Daisy UI", "Golang", "PostgreSql"],
+    year: 2024,
+    type: "Frontend Development",
   },
   {
     id: 1,
@@ -95,6 +99,8 @@ export const works = [
       live: "https://next-assignment-fadli.vercel.app/",
     },
     tech_stack: ["Next js", "Typescript", "Tailwind CSS"],
+    year: 2024,
+    type: "Frontend Development",
   },
   {
     id: 2,
@@ -107,6 +113,8 @@ export const works = [
       live: "https://tripease.my.id/",
     },
     tech_stack: ["React js", "Tailwind CSS", "Cloudinary", "Jotai", "SWR"],
+    year: 2024,
+    type: "Frontend Development",
   },
   {
     id: 3,
@@ -119,5 +127,7 @@ export const works = [
       live: "-",
     },
     tech_stack: ["React js", "Tailwind CSS", "Graphql", "Redux"],
+    year: 2024,
+    type: "Frontend Development",
   },
 ];
