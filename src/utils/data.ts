@@ -70,3 +70,54 @@ export const Skill = [
     url: "/logo/matlab.png",
   },
 ];
+
+export const works = [
+  {
+    id: 0,
+    title: "Varmasea App",
+    image: "",
+    description:
+      "Varmasea is a cutting-edge healthcare application designed to seamlessly integrate health and wellness into your lifestyle. With Varmasea, users can easily browse and purchase healthcare products through a convenient shopping cart feature, ensuring access to essential items with just a few clicks. Additionally, the app offers a revolutionary telemedicine experience, allowing users to engage in real-time chats with healthcare professionals",
+    links: {
+      github: "https://github.com/fadlirizaldy/varmasea",
+      live: "-",
+    },
+    tech_stack: ["Next js", "Typescript", "Tailwind CSS", "Daisy UI", "Golang", "PostgreSql"],
+  },
+  {
+    id: 1,
+    title: "Pixel News",
+    image: "/img/pixel-news.png",
+    description:
+      "Introducing Pixel News, your go-to destination for the latest and most exciting developments in the gaming world. Dive into the immersive universe of gaming with Pixel News, where users can stay informed about the hottest trends, releases, and industry insights through a visually engaging newspaper-style format. Unlock a premium experience by subscribing to our newspaper, gaining exclusive access to in-depth articles.",
+    links: {
+      github: "https://github.com/fadlirizaldy/varmasea",
+      live: "https://next-assignment-fadli.vercel.app/",
+    },
+    tech_stack: ["Next js", "Typescript", "Tailwind CSS"],
+  },
+  {
+    id: 2,
+    title: "Tripease",
+    image: "/img/tripease.png",
+    description:
+      "Tripease is a comprehensive mobile-based travel booking application that simplifies and enhances the travel planning experience with its user-friendly interface and diverse range of options.",
+    links: {
+      github: "https://github.com/fadlirizaldy/tripease-admin",
+      live: "https://tripease.my.id/",
+    },
+    tech_stack: ["React js", "Tailwind CSS", "Cloudinary", "Jotai", "SWR"],
+  },
+  {
+    id: 3,
+    title: "SIAKAD",
+    image: "/img/siakad.png",
+    description:
+      "SIAKAD is an integrated academic information system platform for students, offering efficient and transparent access to academic data, class schedules, and course information.",
+    links: {
+      github: "https://github.com/fadlirizaldy/varmasea",
+      live: "-",
+    },
+    tech_stack: ["React js", "Tailwind CSS", "Graphql", "Redux"],
+  },
+];

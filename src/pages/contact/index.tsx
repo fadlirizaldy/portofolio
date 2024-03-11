@@ -1,3 +1,4 @@
+"use client";
 import MainLayout from "@/components/MainLayout";
 import { Icon } from "@iconify-icon/react/dist/iconify.mjs";
 import React, { useState } from "react";
@@ -45,16 +46,9 @@ const ContactPage = () => {
     <MainLayout title="Contact me | Fadli">
       <div className="bg-primary bg-opacity-20 md:min-h-44 min-h-52">
         <div className="h-full max-w-[1200px] w-[90%] mx-auto pt-10 pb-8 flex flex-col items-center">
-          <h1 className="text-2xl font-semibold">Contact Me</h1>
-          <p className="text-secondaryText">Feel free to drop me a line below</p>
+          <h1 className="text-2xl font-semibold dark:text-white">Contact Me</h1>
+          <p className="text-secondaryText dark:text-slate-400">Feel free to drop me a line below</p>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="absolute">
-          <path
-            fill="#D1DADB"
-            fillOpacity="1"
-            d="M0,128L48,122.7C96,117,192,107,288,122.7C384,139,480,181,576,181.3C672,181,768,139,864,144C960,149,1056,203,1152,197.3C1248,192,1344,128,1392,96L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
-          ></path>
-        </svg>
       </div>
       <div className="max-w-[1200px] w-[90%] mx-auto flex justify-center">
         <div className="flex flex-col md:flex-row justify-center gap-4 relative w-full -top-16 md:-top-10">
