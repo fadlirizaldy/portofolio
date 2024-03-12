@@ -30,34 +30,22 @@ const WorkDetail = () => {
           </div>
           <div className="w-[70%]">
             <div className="px-4 sm:px-0">
-              <h3 className="text-xl font-semibold leading-7 text-gray-900">Doctor Information</h3>
-              <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Personal details and contact</p>
+              <h3 className="text-xl font-semibold leading-7 text-gray-900">{data?.title}</h3>
+              <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Project details</p>
             </div>
             <div className="mt-6 border-t border-gray-100">
               <dl className="divide-y divide-gray-100">
                 <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                  <dt className="text-sm font-medium leading-6 text-gray-900">Full name</dt>
-                  <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">varmasea</dd>
+                  <dt className="text-sm font-medium leading-6 text-gray-900">Type</dt>
+                  <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{data?.type}</dd>
                 </div>
                 <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                  <dt className="text-sm font-medium leading-6 text-gray-900">Specialization</dt>
-                  <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Yes</dd>
+                  <dt className="text-sm font-medium leading-6 text-gray-900">Year</dt>
+                  <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{data?.year}</dd>
                 </div>
                 <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                  <dt className="text-sm font-medium leading-6 text-gray-900">Years of Experience</dt>
-                  <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">2 Years</dd>
-                </div>
-                <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                  <dt className="text-sm font-medium leading-6 text-gray-900">Phone Number</dt>
-                  <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">0856932132</dd>
-                </div>
-                <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                  <dt className="text-sm font-medium leading-6 text-gray-900">Status</dt>
-                  <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">valid</dd>
-                </div>
-                <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                  <dt className="text-sm font-medium leading-6 text-gray-900">Attachments</dt>
-                  <dd className="mt-2 text-sm text-gray-900 sm:col-span-2 sm:mt-0">Here</dd>
+                  <dt className="text-sm font-medium leading-6 text-gray-900">Description</dt>
+                  <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{data?.description}</dd>
                 </div>
               </dl>
             </div>
