@@ -6,6 +6,7 @@ import TextTransition, { presets } from "react-text-transition";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import ImageSlider from "@/components/imageSlider";
 
 const handleDownloadClick = () => {
   const pdfUrl = "/CV_Fadli Rizaldy_IT.pdf";
@@ -63,22 +64,7 @@ export default function Home() {
       </div>
       <div className="max-w-[1200px] w-[90%] mx-auto mb-4 md:px-20">
         <h2 className="text-center font-medium text-xl mb-2 dark:text-white">Skills</h2>
-        <div className="overflow-hidden flex gap-3">
-          <div className="gap-3 logos-slide flex">
-            {Skill.map((data) => (
-              <div key={data.id} className="w-20 h-20 min-w-20 rounded-full">
-                <img src={data.url} alt={data.name} className="object-cover w-full h-full rounded-full" />
-              </div>
-            ))}
-          </div>
-          <div className="gap-3 logos-slide flex">
-            {Skill.map((data) => (
-              <div key={data.id} className="w-20 h-20 min-w-20 rounded-full">
-                <img src={data.url} alt={data.name} className="object-cover w-full h-full rounded-full" />
-              </div>
-            ))}
-          </div>
-        </div>
+        <ImageSlider />
       </div>
       <div className="bg-primary bg-opacity-20 min-h-56">
         <div className="h-full max-w-[1200px] w-[90%] mx-auto pt-3 pb-8">

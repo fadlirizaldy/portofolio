@@ -1,0 +1,31 @@
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  width: 150px;
+  height: 80px;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 125px;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos:after {
+  right: 125px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logos-slide {
+  animation: 25s slide infinite linear;
+}
