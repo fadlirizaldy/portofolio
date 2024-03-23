@@ -1,5 +1,3 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
 import MainLayout from "@/components/MainLayout";
 import { DataProfile, Skill, Works } from "@/utils/data";
 import { motion } from "framer-motion";
@@ -9,7 +7,16 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-// const inter = Inter({ subsets: ["latin"] });
+const handleDownloadClick = () => {
+  const pdfUrl = "/CV_Fadli Rizaldy_IT.pdf";
+
+  const link = document.createElement("a");
+  link.href = pdfUrl;
+  link.setAttribute("download", "Fadli_CV.pdf");
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 
 export default function Home() {
   const router = useRouter();
@@ -43,30 +50,34 @@ export default function Home() {
           </TextTransition>
           <p className="mt-4">{DataProfile.about}</p>
           <div className="mt-3">
-            <Link
-              href={""}
-              download={"/logo/js.png"}
-              className="py-2 px-4 rounded-lg border border-slate-200 bg-primaryBtn hover:bg-primary text-white font-semibold transition-all"
-              target="_blank"
+            <button
+              className="py-1 px-4 rounded-lg border border-slate-200 bg-primaryBtn hover:bg-primary text-white font-semibold transition-all"
               rel="noreferrer"
+              onClick={() => handleDownloadClick()}
             >
               Download CV
-            </Link>
+            </button>
           </div>
         </section>
         <img src="/fadli-photo.jpg" alt="" className="w-48 h-48 rounded-full object-cover" />
       </div>
       <div className="max-w-[1200px] w-[90%] mx-auto mb-4 md:px-20">
         <h2 className="text-center font-medium text-xl mb-2 dark:text-white">Skills</h2>
-        <div className="flex items-center gap-5 overflow-x-scroll px-2">
-          {Skill.map((data) => (
-            <div
-              key={data.id}
-              className="min-w-20 w-20 max-w-20 h-20 rounded-full border border-slate-100 overflow-hidden"
-            >
-              <img src={data.url} alt={data.name} className="object-cover w-full h-full" />
-            </div>
-          ))}
+        <div className="overflow-hidden flex gap-3">
+          <div className="gap-3 logos-slide flex">
+            {Skill.map((data) => (
+              <div key={data.id} className="w-20 h-20 min-w-20 rounded-full">
+                <img src={data.url} alt={data.name} className="object-cover w-full h-full rounded-full" />
+              </div>
+            ))}
+          </div>
+          <div className="gap-3 logos-slide flex">
+            {Skill.map((data) => (
+              <div key={data.id} className="w-20 h-20 min-w-20 rounded-full">
+                <img src={data.url} alt={data.name} className="object-cover w-full h-full rounded-full" />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <div className="bg-primary bg-opacity-20 min-h-56">
@@ -77,6 +88,13 @@ export default function Home() {
           </div>
           <div className="flex sm:justify-center text-black dark:text-white">
             <ul className="steps steps-vertical gap-2 relative sm:left-32 overflow-visible">
+              <li data-content="★" className="step step-neutral">
+                <div className="flex flex-col items-start sm:absolute sm:-left-[270px]">
+                  <h4 className="text-xl font-medium">Frontend Engineer Internship</h4>
+                  <h5 className="text-base text-slate-500">Ajaib</h5>
+                  <p className="text-slate-700 text-sm">Feb 2024 - May 2024</p>
+                </div>
+              </li>
               <li data-content="★" className="step step-neutral flex justify-start">
                 <div className="flex flex-col items-start">
                   <h4 className="text-xl font-medium">Frontend Engineer Trainee</h4>

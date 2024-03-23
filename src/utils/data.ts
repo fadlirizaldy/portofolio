@@ -77,7 +77,7 @@ export const Works: DataType[] = [
   {
     id: 0,
     title: "Varmasea App",
-    image: "",
+    image: "/img/varmasea.png",
     description:
       "Varmasea is a cutting-edge healthcare application designed to seamlessly integrate health and wellness into your lifestyle. With Varmasea, users can easily browse and purchase healthcare products through a convenient shopping cart feature, ensuring access to essential items with just a few clicks. Additionally, the app offers a revolutionary telemedicine experience, allowing users to engage in real-time chats with healthcare professionals",
     links: {

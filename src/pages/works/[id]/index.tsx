@@ -22,7 +22,7 @@ const WorkDetail = () => {
           className="absolute text-black top-4 flex items-center cursor-pointer"
           onClick={() => router.push("/works")}
         >
-          <Icon icon="tabler:arrow-left" className="text-xl h-full" />
+          <Icon icon="tabler:arrow-left" className="text-xl h-full dark:text-white" />
         </div>
         <div className="flex gap-10 mt-7 p-3 border border-slate-300 rounded-lg">
           <div className="w-80 max-h-56">
@@ -30,22 +30,28 @@ const WorkDetail = () => {
           </div>
           <div className="w-[70%]">
             <div className="px-4 sm:px-0">
-              <h3 className="text-xl font-semibold leading-7 text-gray-900">{data?.title}</h3>
-              <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Project details</p>
+              <h3 className="text-xl font-semibold leading-7 text-gray-900 dark:text-primaryBtn">{data?.title}</h3>
+              <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-500 dark:text-gray-200">Project details</p>
             </div>
             <div className="mt-6 border-t border-gray-100">
-              <dl className="divide-y divide-gray-100">
+              <dl className="divide-y divide-gray-100 ">
                 <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                  <dt className="text-sm font-medium leading-6 text-gray-900">Type</dt>
-                  <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{data?.type}</dd>
+                  <dt className="text-sm font-medium leading-6 text-gray-900 dark:text-primaryBtn">Type</dt>
+                  <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0 dark:text-white">
+                    {data?.type}
+                  </dd>
                 </div>
                 <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                  <dt className="text-sm font-medium leading-6 text-gray-900">Year</dt>
-                  <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{data?.year}</dd>
+                  <dt className="text-sm font-medium leading-6 text-gray-900 dark:text-primaryBtn">Year</dt>
+                  <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0 dark:text-white">
+                    {data?.year}
+                  </dd>
                 </div>
                 <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                  <dt className="text-sm font-medium leading-6 text-gray-900">Description</dt>
-                  <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{data?.description}</dd>
+                  <dt className="text-sm font-medium leading-6 text-gray-900 dark:text-primaryBtn">Description</dt>
+                  <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0 dark:text-white">
+                    {data?.description}
+                  </dd>
                 </div>
               </dl>
             </div>
