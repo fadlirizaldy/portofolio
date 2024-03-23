@@ -3,7 +3,7 @@ import React from "react";
 
 const ImageSlider = () => {
   return (
-    <div className="overflow-hidden flex gap-3 logos relative">
+    <div className="overflow-hidden flex gap-3 logos relative dark:before:hidden dark:after:hidden">
       <div className="gap-3 logos-slide flex">
         {Skill.map((data) => (
           <div key={data.id} className="w-20 h-20 min-w-20 rounded-full">
