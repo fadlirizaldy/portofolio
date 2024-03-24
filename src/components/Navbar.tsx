@@ -38,7 +38,7 @@ const Navbar = () => {
         >
           <Icon icon={`${!isShowMenu ? "pajamas:hamburger" : "ic:round-close"}`} className="text-2xl" />
         </div>
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-1 cursor-pointer" onClick={() => router.push("/")}>
           <h1 className={`${roboto.className} tracking-wider italic text-2xl dark:text-white`}>Fadli</h1>
           <div className="w-3 h-3 bg-primaryBtn rounded-full"></div>
         </div>

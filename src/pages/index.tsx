@@ -52,7 +52,7 @@ export default function Home() {
           <p className="mt-4">{DataProfile.about}</p>
           <div className="mt-3">
             <button
-              className="py-1 px-4 rounded-lg border border-slate-200 bg-primaryBtn hover:bg-primary text-white font-semibold transition-all"
+              className="btn py-3 px-4 min-h-fit h-fit rounded-lg border border-slate-200 bg-primaryBtn hover:bg-primary text-white font-semibold transition-all"
               rel="noreferrer"
               onClick={() => handleDownloadClick()}
             >
@@ -135,7 +135,7 @@ export default function Home() {
                 <h4 className="font-medium text-xl">{work.title}</h4>
                 <div className="flex gap-4 items-center">
                   <p className="px-2 rounded-2xl bg-primaryBtn text-sm text-white">{work.year}</p>
-                  <p className="text-slate-500">{work.year}</p>
+                  <p className="text-slate-500">{work.type}</p>
                 </div>
                 <p className="line-clamp-2 dark:font-thin">{work.description}</p>
               </div>

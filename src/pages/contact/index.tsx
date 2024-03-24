@@ -104,7 +104,7 @@ const ContactPage = () => {
               </div>
               <button
                 type="submit"
-                className="py-[2px] px-4 bg-primary hover:bg-primaryBtn transition-all rounded-md text-white min-w-16 w-fit text-sm mt-5"
+                className="btn h-fit min-h-fit py-[3px] px-5 bg-primary hover:bg-primaryBtn transition-all rounded-md text-white min-w-16 w-fit text-sm mt-5"
               >
                 {loading ? "Loading.." : "Send"}
               </button>
