@@ -20,8 +20,12 @@ const ThemeSwitcher = () => {
   };
 
   return (
-    <div className="md:static absolute top-5 right-5">
-      <DarkModeSwitch checked={darkMode === null ? false : darkMode === "light" ? false : true} onChange={toggleDarkMode} size={30} />
+    <div className="sm:static absolute top-5 right-5">
+      <DarkModeSwitch
+        checked={darkMode === null ? false : darkMode === "light" ? false : true}
+        onChange={toggleDarkMode}
+        size={30}
+      />
     </div>
   );
 };

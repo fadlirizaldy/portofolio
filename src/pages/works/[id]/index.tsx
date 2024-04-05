@@ -24,11 +24,11 @@ const WorkDetail = () => {
         >
           <Icon icon="tabler:arrow-left" className="text-xl h-full dark:text-white" />
         </div>
-        <div className="flex gap-10 mt-7 p-3 border border-slate-300 rounded-lg">
-          <div className="w-80 max-h-56">
+        <div className="flex flex-col md:flex-row gap-10 mt-7 p-3 border border-slate-300 rounded-lg">
+          <div className="w-full md:w-80 md:max-h-56">
             <img src={data?.image} alt="project-img" className="w-full h-full object-cover rounded-lg" />
           </div>
-          <div className="w-[70%]">
+          <div className="w-full md:w-[70%]">
             <div className="px-4 sm:px-0">
               <h3 className="text-xl font-semibold leading-7 text-gray-900 dark:text-primaryBtn">{data?.title}</h3>
               <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-500 dark:text-gray-200">Project details</p>
