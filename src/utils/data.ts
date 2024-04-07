@@ -130,4 +130,18 @@ export const Works: DataType[] = [
     year: 2024,
     type: "Frontend Development",
   },
+  {
+    id: 4,
+    title: "Cinemy",
+    image: "/img/cinemy.png",
+    description:
+      "Cinemy caters to every cinematic taste. Whether you're in search of the hottest blockbusters or hidden gems, Cinemy provides easy access to an extensive library of entertainment. Experience the thrill of discovering new favorites and staying updated with the most recent releases",
+    links: {
+      github: "https://github.com/fadlirizaldy/cinemy-next",
+      live: "https://cinemy-next.vercel.app/",
+    },
+    tech_stack: ["Next js", "Tailwind CSS"],
+    year: 2022,
+    type: "Frontend Development",
+  },
 ];
