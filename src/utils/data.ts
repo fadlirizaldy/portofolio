@@ -82,7 +82,7 @@ export const Works: DataType[] = [
       "Varmasea is a cutting-edge healthcare application designed to seamlessly integrate health and wellness into your lifestyle. With Varmasea, users can easily browse and purchase healthcare products through a convenient shopping cart feature, ensuring access to essential items with just a few clicks. Additionally, the app offers a revolutionary telemedicine experience, allowing users to engage in real-time chats with healthcare professionals",
     links: {
       github: "https://github.com/fadlirizaldy/varmasea",
-      live: "-",
+      live: "",
     },
     tech_stack: ["Next js", "Typescript", "Tailwind CSS", "Daisy UI", "Golang", "PostgreSql"],
     year: 2024,
@@ -142,6 +142,20 @@ export const Works: DataType[] = [
     },
     tech_stack: ["Next js", "Tailwind CSS"],
     year: 2022,
+    type: "Frontend Development",
+  },
+  {
+    id: 5,
+    title: "Echo",
+    image: "/img/echo.png",
+    description:
+      "Echo is your brand new social media app designed for dynamic and engaging discussions. With Echo, you can effortlessly create threads on any topic, making it easy to start conversations and connect with others. Whether you're sharing ideas, debating current events, or just chatting with friends, Echo provides a seamless and intuitive platform to keep the conversation going. Join Echo today and experience a social media space where every voice is heard and every discussion thrives.",
+    links: {
+      github: "https://github.com/fadlirizaldy/echo-app",
+      live: "https://echo-app-nine.vercel.app/",
+    },
+    tech_stack: ["React js", "Tailwind CSS", "Redux"],
+    year: 2024,
     type: "Frontend Development",
   },
 ];

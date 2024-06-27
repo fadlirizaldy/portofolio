@@ -1,7 +1,10 @@
+import React from "react";
+import { useRouter } from "next/router";
+
+import { Icon } from "@iconify-icon/react";
 import MainLayout from "@/components/MainLayout";
 import { Works } from "@/utils/data";
-import { useRouter } from "next/router";
-import React from "react";
+import Link from "next/link";
 
 const WorksPage = () => {
   const router = useRouter();
@@ -28,6 +31,27 @@ const WorksPage = () => {
                   <p className="text-slate-400">{work.type}</p>
                 </div>
                 <p className="line-clamp-2">{work.description}</p>
+
+                <div className="flex items-center gap-2 mt-5">
+                  <Link
+                    href={work.links.live ?? "/"}
+                    onClick={(e) => e.stopPropagation()}
+                    target="_blank"
+                    className="tooltip"
+                    data-tip="Live"
+                  >
+                    <Icon icon="fluent:live-20-filled" className="text-slate-600" width={24} />
+                  </Link>
+                  <Link
+                    href={work.links.github ?? "/"}
+                    onClick={(e) => e.stopPropagation()}
+                    target="_blank"
+                    className="tooltip"
+                    data-tip="Github"
+                  >
+                    <Icon icon="mdi:github" className="text-slate-600" width={24} />
+                  </Link>
+                </div>
               </div>
             </div>
           ))}
