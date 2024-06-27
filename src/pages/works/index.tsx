@@ -34,22 +34,22 @@ const WorksPage = () => {
 
                 <div className="flex items-center gap-2 mt-5">
                   <Link
-                    href={work.links.live ?? "/"}
+                    href={work.links.live ?? ""}
                     onClick={(e) => e.stopPropagation()}
                     target="_blank"
                     className="tooltip"
                     data-tip="Live"
                   >
-                    <Icon icon="fluent:live-20-filled" className="text-slate-600" width={24} />
+                    <Icon icon="fluent:live-20-filled" className="dark:text-slate-200 text-slate-600" width={24} />
                   </Link>
                   <Link
-                    href={work.links.github ?? "/"}
+                    href={work.links.github ?? ""}
                     onClick={(e) => e.stopPropagation()}
                     target="_blank"
                     className="tooltip"
                     data-tip="Github"
                   >
-                    <Icon icon="mdi:github" className="text-slate-600" width={24} />
+                    <Icon icon="mdi:github" className="dark:text-slate-200 text-slate-600" width={24} />
                   </Link>
                 </div>
               </div>
