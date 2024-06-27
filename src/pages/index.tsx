@@ -1,7 +1,5 @@
 import MainLayout from "@/components/MainLayout";
-import { DataProfile, Experience, Skill, Works } from "@/utils/data";
-import { motion } from "framer-motion";
-import Template from "@/components/motion/Template";
+import { DataProfile, Works } from "@/utils/data";
 import TextTransition, { presets } from "react-text-transition";
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -10,7 +8,6 @@ import ImageSlider from "@/components/imageSlider";
 import ShowInWhenVisible from "@/components/motion/ShowInWhenVisible";
 import ShowFromBottom from "@/components/motion/Template";
 import ExperienceSection from "@/features/ExperienceSection";
-import ExperienceItem from "@/components/ExperienceItem";
 
 const handleDownloadClick = () => {
   const pdfUrl = "/CV_Fadli Rizaldy_IT.pdf";
