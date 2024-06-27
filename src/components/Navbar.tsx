@@ -21,7 +21,6 @@ const Navbar = () => {
       setWidth(window.innerWidth);
     };
     if (typeof window !== "undefined") {
-      console.log("HADNLE RESI", window.innerWidth);
       window.addEventListener("resize", handleResize);
     }
     return () => {

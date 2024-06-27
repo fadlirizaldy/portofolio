@@ -1,4 +1,4 @@
-import { DataType } from "./type";
+import { DataType, ExperienceType } from "./type";
 
 export const DataProfile = {
   name: "Fadli Rizaldy",
@@ -143,5 +143,44 @@ export const Works: DataType[] = [
     tech_stack: ["Next js", "Tailwind CSS"],
     year: 2022,
     type: "Frontend Development",
+  },
+];
+
+export const Experience: ExperienceType[] = [
+  {
+    id: 5,
+    title: "Frontend Engineer",
+    company: "Astra Graphia Information Technology",
+    duration: "Apr 2024 - Now",
+  },
+  {
+    id: 4,
+    title: "Frontend Engineer Internship",
+    company: "Ajaib",
+    duration: "Feb 2024 - May 2024",
+  },
+  {
+    id: 3,
+    title: "Frontend Engineer Trainee",
+    company: "Shopee",
+    duration: "Oct 2023 - Feb 2024",
+  },
+  {
+    id: 2,
+    title: "Frontend Engineer Mentee",
+    company: "Alterra Academy",
+    duration: "Feb 2023 - Jun 2023",
+  },
+  {
+    id: 1,
+    title: "Data Scientist Internship",
+    company: "Bisa AI Academy",
+    duration: "Feb 2022 - Jul 2022",
+  },
+  {
+    id: 0,
+    title: "Data Admin Internship",
+    company: "Telunjuk.com",
+    duration: "Nov 2021 - Des 2021",
   },
 ];

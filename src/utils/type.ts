@@ -13,3 +13,10 @@ export type DataType = {
   year: number;
   type: string;
 };
+
+export type ExperienceType = {
+  id: number;
+  title: string;
+  company: string;
+  duration: string;
+};

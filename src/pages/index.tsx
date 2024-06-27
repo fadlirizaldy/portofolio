@@ -1,5 +1,5 @@
 import MainLayout from "@/components/MainLayout";
-import { DataProfile, Skill, Works } from "@/utils/data";
+import { DataProfile, Experience, Skill, Works } from "@/utils/data";
 import { motion } from "framer-motion";
 import Template from "@/components/motion/Template";
 import TextTransition, { presets } from "react-text-transition";
@@ -9,6 +9,8 @@ import { useRouter } from "next/router";
 import ImageSlider from "@/components/imageSlider";
 import ShowInWhenVisible from "@/components/motion/ShowInWhenVisible";
 import ShowFromBottom from "@/components/motion/Template";
+import ExperienceSection from "@/features/ExperienceSection";
+import ExperienceItem from "@/components/ExperienceItem";
 
 const handleDownloadClick = () => {
   const pdfUrl = "/CV_Fadli Rizaldy_IT.pdf";
@@ -79,46 +81,9 @@ export default function Home() {
             <h3 className="font-medium text-xl text-secondary dark:text-primaryBtn italic">Experience</h3>
           </div>
           <div className="flex sm:justify-center text-black dark:text-white">
-            <ul className="steps steps-vertical gap-2 relative sm:left-32 overflow-visible">
-              <li data-content="★" className="step step-neutral">
-                <div className="flex flex-col items-start sm:absolute sm:-left-[270px]">
-                  <h4 className="text-xl font-medium">Frontend Engineer Internship</h4>
-                  <h5 className="text-base text-slate-500">Ajaib</h5>
-                  <p className="text-slate-700 text-sm">Feb 2024 - May 2024</p>
-                </div>
-              </li>
-              <li data-content="★" className="step step-neutral flex justify-start">
-                <div className="flex flex-col items-start">
-                  <h4 className="text-xl font-medium">Frontend Engineer Trainee</h4>
-                  <h5 className="text-base text-slate-500">Shopee</h5>
-                  <p className="text-slate-700 text-sm">Oct 2023 - Feb 2024</p>
-                </div>
-              </li>
-              <li data-content="★" className="step step-neutral">
-                <div className="flex flex-col items-start sm:absolute sm:-left-[270px]">
-                  <h4 className="text-xl font-medium">Frontend Developer Mentee</h4>
-                  <h5 className="text-base text-slate-500">Alterra Academy</h5>
-                  <p className="text-slate-700 text-sm">Feb 2023 - Jun 2023</p>
-                </div>
-              </li>
-              <li data-content="★" className="step step-neutral">
-                <div className="flex flex-col items-start">
-                  <h4 className="text-xl font-medium">Data Scientist Internship</h4>
-                  <h5 className="text-base text-slate-500">Bisa AI Academy</h5>
-                  <p className="text-slate-700 text-sm">Feb 2022 - Jul 2022</p>
-                </div>
-              </li>
-              <li data-content="★" className="step step-neutral">
-                <div className="flex flex-col items-start sm:absolute sm:-left-[270px]">
-                  <h4 className="text-xl font-medium">Data Admin Internship</h4>
-                  <h5 className="text-base text-slate-500">Telunjuk.com</h5>
-                  <p className="text-slate-700 text-sm">Nov 2021 - Des 2021</p>
-                </div>
-              </li>
-            </ul>
+            <ExperienceSection />
           </div>
           {/* <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}> */}
-
           {/* </motion.div> */}
         </div>
       </div>
