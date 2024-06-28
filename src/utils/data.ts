@@ -76,6 +76,20 @@ export const Skill = [
 export const Works: DataType[] = [
   {
     id: 0,
+    title: "Jotter App",
+    image: "/img/jotter.png",
+    description:
+      'Jotter is an intuitive note app designed to keep all your important reminders in one easily accessible space. With the tagline "Your virtual reminder space," it ensures you never miss a beat.',
+    links: {
+      github: "https://github.com/fadlirizaldy/jotter-app",
+      live: "https://jotter-app-mu.vercel.app/",
+    },
+    tech_stack: ["React js", "Tailwind CSS"],
+    year: 2024,
+    type: "Frontend Development",
+  },
+  {
+    id: 1,
     title: "Varmasea App",
     image: "/img/varmasea.png",
     description:
@@ -84,12 +98,12 @@ export const Works: DataType[] = [
       github: "https://github.com/fadlirizaldy/varmasea",
       live: "",
     },
-    tech_stack: ["Next js", "Typescript", "Tailwind CSS", "Daisy UI", "Golang", "PostgreSql"],
+    tech_stack: ["Next js", "Typescript", "Tailwind CSS", "Daisy UI"],
     year: 2024,
     type: "Frontend Development",
   },
   {
-    id: 1,
+    id: 2,
     title: "Pixel News",
     image: "/img/pixel-news.png",
     description:
@@ -103,7 +117,7 @@ export const Works: DataType[] = [
     type: "Frontend Development",
   },
   {
-    id: 2,
+    id: 3,
     title: "Tripease",
     image: "/img/tripease.png",
     description:
@@ -117,7 +131,7 @@ export const Works: DataType[] = [
     type: "Frontend Development",
   },
   {
-    id: 3,
+    id: 4,
     title: "SIAKAD",
     image: "/img/siakad.png",
     description:
@@ -131,7 +145,7 @@ export const Works: DataType[] = [
     type: "Frontend Development",
   },
   {
-    id: 4,
+    id: 5,
     title: "Cinemy",
     image: "/img/cinemy.png",
     description:
@@ -145,7 +159,7 @@ export const Works: DataType[] = [
     type: "Frontend Development",
   },
   {
-    id: 5,
+    id: 6,
     title: "Echo",
     image: "/img/echo.png",
     description:
