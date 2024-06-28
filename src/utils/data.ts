@@ -135,10 +135,10 @@ export const Works: DataType[] = [
     title: "SIAKAD",
     image: "/img/siakad.png",
     description:
-      "SIAKAD is an integrated academic information system platform for students, offering efficient and transparent access to academic data, class schedules, and course information.",
+      "SIAKAD is a dummy integrated academic information system platform for students, offering efficient and transparent access to academic data, class schedules, and course information.",
     links: {
       github: "https://github.com/fadlirizaldy/varmasea",
-      live: "-",
+      live: "https://siakad-v1.vercel.app/",
     },
     tech_stack: ["React js", "Tailwind CSS", "Graphql", "Redux"],
     year: 2024,
