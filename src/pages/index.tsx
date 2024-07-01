@@ -1,5 +1,5 @@
 import MainLayout from "@/components/MainLayout";
-import { DataProfile, Works } from "@/utils/data";
+import { DataProfile, Experience, Works } from "@/utils/data";
 import TextTransition, { presets } from "react-text-transition";
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import ImageSlider from "@/components/imageSlider";
 import ShowInWhenVisible from "@/components/motion/ShowInWhenVisible";
 import ShowFromBottom from "@/components/motion/Template";
-import ExperienceSection from "@/features/ExperienceSection";
+import ExperienceItem from "@/components/ExperienceItem";
 
 const handleDownloadClick = () => {
   const pdfUrl = "/CV_Fadli Rizaldy_IT.pdf";
@@ -78,7 +78,11 @@ export default function Home() {
             <h3 className="font-medium text-xl text-secondary dark:text-primaryBtn italic">Experience</h3>
           </div>
           <div className="flex sm:justify-center items-center mx-auto text-black dark:text-white">
-            <ExperienceSection />
+            <ul className="steps steps-vertical gap-2 relative sm:left-32 overflow-visible">
+              {Experience.map((item) => (
+                <ExperienceItem key={item.id} {...item} />
+              ))}
+            </ul>
           </div>
           {/* <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}> */}
           {/* </motion.div> */}
