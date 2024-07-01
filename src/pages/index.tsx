@@ -77,7 +77,7 @@ export default function Home() {
             <div className="w-2 h-8 bg-primary dark:bg-primaryBtn rounded-md"></div>
             <h3 className="font-medium text-xl text-secondary dark:text-primaryBtn italic">Experience</h3>
           </div>
-          <div className="flex sm:justify-center text-black dark:text-white">
+          <div className="flex sm:justify-center items-center mx-auto text-black dark:text-white">
             <ExperienceSection />
           </div>
           {/* <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}> */}
