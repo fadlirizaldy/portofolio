@@ -76,15 +76,15 @@ export const Skill = [
 export const Works: DataType[] = [
   {
     id: 0,
-    title: "Jotter App",
-    image: "/img/jotter.png",
+    title: "Quran Hub",
+    image: "/img/quranhub.png",
     description:
-      'Jotter is an intuitive note app designed to keep all your important reminders in one easily accessible space. With the tagline "Your virtual reminder space," it ensures you never miss a beat.',
+      'Quran Hub is your essential online Quran companion, providing access to the holy text anytime, anywhere. With Quran Hub, users can seamlessly navigate through the verses of the Quran, offering a digital platform that ensures accessibility and convenience. Whether at home, on the go, or during travels, Quran Hub empowers individuals to engage with the sacred teachings of Islam effortlessly. This app aims to foster spiritual growth and connection through its user-friendly interface, making the Quran accessible to all, whenever they seek solace, guidance, or reflection.',
     links: {
-      github: "https://github.com/fadlirizaldy/jotter-app",
-      live: "https://jotter-app-mu.vercel.app/",
+      github: "https://github.com/fadlirizaldy/quran-hub",
+      live: "https://quran-hub-tau.vercel.app/",
     },
-    tech_stack: ["React js", "Tailwind CSS"],
+    tech_stack: ["Next js", "Tailwind CSS"],
     year: 2024,
     type: "Frontend Development",
   },
@@ -104,6 +104,20 @@ export const Works: DataType[] = [
   },
   {
     id: 2,
+    title: "Jotter App",
+    image: "/img/jotter.png",
+    description:
+      'Jotter is an intuitive note app designed to keep all your important reminders in one easily accessible space. With the tagline "Your virtual reminder space," it ensures you never miss a beat.',
+    links: {
+      github: "https://github.com/fadlirizaldy/jotter-app",
+      live: "https://jotter-app-mu.vercel.app/",
+    },
+    tech_stack: ["React js", "Tailwind CSS"],
+    year: 2024,
+    type: "Frontend Development",
+  },
+  {
+    id: 3,
     title: "Pixel News",
     image: "/img/pixel-news.png",
     description:
@@ -117,7 +131,7 @@ export const Works: DataType[] = [
     type: "Frontend Development",
   },
   {
-    id: 3,
+    id: 4,
     title: "Tripease",
     image: "/img/tripease.png",
     description:
@@ -131,7 +145,7 @@ export const Works: DataType[] = [
     type: "Frontend Development",
   },
   {
-    id: 4,
+    id: 5,
     title: "SIAKAD",
     image: "/img/siakad.png",
     description:
@@ -145,7 +159,7 @@ export const Works: DataType[] = [
     type: "Frontend Development",
   },
   {
-    id: 5,
+    id: 6,
     title: "Cinemy",
     image: "/img/cinemy.png",
     description:
@@ -159,7 +173,7 @@ export const Works: DataType[] = [
     type: "Frontend Development",
   },
   {
-    id: 6,
+    id: 7,
     title: "Echo",
     image: "/img/echo.png",
     description:
