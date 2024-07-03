@@ -36,7 +36,7 @@ const WorkDetail = () => {
               <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-500 dark:text-gray-200">Project details</p>
               <div className="flex items-center gap-2 mt-2">
                     <Link
-                      href={data.links.live ?? ""}
+                      href={data?.links?.live ?? ""}
                       onClick={(e) => e.stopPropagation()}
                       target="_blank"
                       className="tooltip"
@@ -45,7 +45,7 @@ const WorkDetail = () => {
                       <Icon icon="fluent:live-20-filled" className="dark:text-slate-200 text-slate-600" width={24} />
                     </Link>
                     <Link
-                      href={data.links.github ?? ""}
+                      href={data?.links?.github ?? ""}
                       onClick={(e) => e.stopPropagation()}
                       target="_blank"
                       className="tooltip"
