@@ -1,9 +1,11 @@
+import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import { Icon } from "@iconify-icon/react";
+
 import MainLayout from "@/components/MainLayout";
 import { Works } from "@/utils/data";
 import { DataType } from "@/utils/type";
-import { Icon } from "@iconify-icon/react/dist/iconify.mjs";
-import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
 
 const WorkDetail = () => {
   const router = useRouter();
@@ -32,6 +34,26 @@ const WorkDetail = () => {
             <div className="px-4 sm:px-0">
               <h3 className="text-xl font-semibold leading-7 text-gray-900 dark:text-primaryBtn">{data?.title}</h3>
               <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-500 dark:text-gray-200">Project details</p>
+              <div className="flex items-center gap-2 mt-2">
+                    <Link
+                      href={data.links.live ?? ""}
+                      onClick={(e) => e.stopPropagation()}
+                      target="_blank"
+                      className="tooltip"
+                      data-tip="Live"
+                    >
+                      <Icon icon="fluent:live-20-filled" className="dark:text-slate-200 text-slate-600" width={24} />
+                    </Link>
+                    <Link
+                      href={data.links.github ?? ""}
+                      onClick={(e) => e.stopPropagation()}
+                      target="_blank"
+                      className="tooltip"
+                      data-tip="Github"
+                    >
+                      <Icon icon="mdi:github" className="dark:text-slate-200 text-slate-600" width={24} />
+                    </Link>
+                  </div>
             </div>
             <div className="mt-6 border-t border-gray-100">
               <dl className="divide-y divide-gray-100 ">

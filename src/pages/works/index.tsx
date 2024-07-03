@@ -1,10 +1,10 @@
 import React from "react";
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 import { Icon } from "@iconify-icon/react";
 import MainLayout from "@/components/MainLayout";
 import { Works } from "@/utils/data";
-import Link from "next/link";
 
 const WorksPage = () => {
   const router = useRouter();
@@ -32,7 +32,7 @@ const WorksPage = () => {
                 </div>
                 <p className="line-clamp-2">{work.description}</p>
 
-                <div className="flex items-center gap-2 mt-5">
+                <div className="flex items-center gap-2 mt-2">
                   <Link
                     href={work.links.live ?? ""}
                     onClick={(e) => e.stopPropagation()}

@@ -1,6 +1,6 @@
-import MainLayout from "@/components/MainLayout";
 import React from "react";
 import Link from "next/link";
+import MainLayout from "@/components/MainLayout";
 
 const NotFoundPage = () => {
   return (
