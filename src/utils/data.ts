@@ -123,7 +123,7 @@ export const Works: DataType[] = [
     description:
       "Introducing Pixel News, your go-to destination for the latest and most exciting developments in the gaming world. Dive into the immersive universe of gaming with Pixel News, where users can stay informed about the hottest trends, releases, and industry insights through a visually engaging newspaper-style format. Unlock a premium experience by subscribing to our newspaper, gaining exclusive access to in-depth articles.",
     links: {
-      github: "https://github.com/fadlirizaldy/varmasea",
+      github: "https://github.com/fadlirizaldy/Next-assignment-sealab",
       live: "https://next-assignment-fadli.vercel.app/",
     },
     tech_stack: ["Next js", "Typescript", "Tailwind CSS"],

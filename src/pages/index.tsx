@@ -1,10 +1,12 @@
-import MainLayout from "@/components/MainLayout";
-import { DataProfile, Experience, Works } from "@/utils/data";
-import TextTransition, { presets } from "react-text-transition";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { Icon } from "@iconify-icon/react";
 import { useRouter } from "next/router";
+import TextTransition, { presets } from "react-text-transition";
+
+import MainLayout from "@/components/MainLayout";
 import ImageSlider from "@/components/imageSlider";
+import { DataProfile, Experience, Works } from "@/utils/data";
 import ShowInWhenVisible from "@/components/motion/ShowInWhenVisible";
 import ShowFromBottom from "@/components/motion/Template";
 import ExperienceItem from "@/components/ExperienceItem";
@@ -111,6 +113,26 @@ export default function Home() {
                     <p className="text-slate-500">{work.type}</p>
                   </div>
                   <p className="line-clamp-2 dark:font-thin">{work.description}</p>
+                  <div className="flex items-center gap-2 mt-5">
+                  <Link
+                    href={work.links.live ?? ""}
+                    onClick={(e) => e.stopPropagation()}
+                    target="_blank"
+                    className="tooltip"
+                    data-tip="Live"
+                  >
+                    <Icon icon="fluent:live-20-filled" className="dark:text-slate-200 text-slate-600" width={24} />
+                  </Link>
+                  <Link
+                    href={work.links.github ?? ""}
+                    onClick={(e) => e.stopPropagation()}
+                    target="_blank"
+                    className="tooltip"
+                    data-tip="Github"
+                  >
+                    <Icon icon="mdi:github" className="dark:text-slate-200 text-slate-600" width={24} />
+                  </Link>
+                </div>
                 </div>
               </div>
             ))}
