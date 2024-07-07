@@ -6,9 +6,9 @@ const variants = {
   enter: { opacity: 1, y: 0, x: 0 },
 };
 
-export default function ShowFromBottom({ children, className }: { children: React.ReactNode, className?:string }) {
+export default function ShowFromBottom({ children, className, onClick, key }: { children: React.ReactNode, className?:string,onClick?:()=>void(), key:any }) {
   return (
-    <motion.div variants={variants} initial="hidden" whileInView="enter" transition={{ type: "linear", duration: 0.8, staggerChildren: 0.5 }} className={className}>
+    <motion.div key={key} variants={variants} initial="hidden" whileInView="enter" transition={{ type: "linear", duration: 0.8, staggerChildren: 0.5 }} className={className} onClick={onClick}>
       {children}
     </motion.div>
   );
