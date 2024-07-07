@@ -93,8 +93,8 @@ export default function Home() {
       <div className="h-full max-w-[1200px] w-[90%] mx-auto pt-3 pb-10">
         <h3 className="mb-3 font-medium text-xl text-secondary dark:text-primaryBtn italic">Featured works</h3>
 
-        <ShowFromBottom>
-          <section className="flex flex-col divide-y-2 text-black dark:text-white">
+      <div>
+        <ShowFromBottom className="flex flex-col divide-y-2 text-black dark:text-white">
             {Works?.slice(0, 2).map((work) => (
               <div
                 className="flex flex-col md:flex-row gap-3 py-2 cursor-pointer"
@@ -136,14 +136,14 @@ export default function Home() {
                 </div>
               </div>
             ))}
-          </section>
+          </ShowFromBottom>
           <Link
             href={"/works"}
             className="flex justify-center mt-3 text-primary font-medium text-center hover:underline dark:text-primaryBtn"
           >
             See more...
           </Link>
-        </ShowFromBottom>
+        </div>
       </div>
     </MainLayout>
   );
