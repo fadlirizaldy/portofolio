@@ -2,9 +2,10 @@
 import { motion } from "framer-motion";
 
 const variants = {
-  visible: {
+  enter: {
+    x: 0,
+    y: 0,
     opacity: 1,
-    y: -20,
     transition: {
       when: 'beforeChildren',
       staggerChildren: 0.2,
@@ -12,8 +13,9 @@ const variants = {
     },
   },
   hidden: {
+    x: 0,
+    y:30,
     opacity: 0,
-    x: 1,
     transition: {
       when: 'afterChildren',
     },
