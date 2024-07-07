@@ -2,13 +2,29 @@
 import { motion } from "framer-motion";
 
 const variants = {
-  hidden: { opacity: 0, y: 30, x: 0 },
-  enter: { opacity: 1, y: 0, x: 0 },
+  visible: {
+    opacity: 1,
+    y: -20,
+    transition: {
+      when: 'beforeChildren',
+      staggerChildren: 0.2,
+      delay: 0.3,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    x: 1,
+    transition: {
+      when: 'afterChildren',
+    },
+  },
+  // hidden: { opacity: 0, y: 30, x: 0 },
+  // enter: { opacity: 1, y: 0, x: 0 },
 };
 
-export default function ShowFromBottom({ children, className, onClick, key }: { children: React.ReactNode, className?:string,onClick?:()=>void, key:any }) {
+export default function ShowFromBottom({ children, className }: { children: React.ReactNode, className?:string }) {
   return (
-    <motion.div key={key} variants={variants} initial="hidden" whileInView="enter" transition={{ type: "linear", duration: 0.8, staggerChildren: 0.5 }} className={className} onClick={onClick}>
+    <motion.div variants={variants} initial="hidden" whileInView="enter" transition={{ type: "linear", duration: 0.8, staggerChildren: 0.5 }} className={className}>
       {children}
     </motion.div>
   );
