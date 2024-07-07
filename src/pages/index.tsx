@@ -94,9 +94,9 @@ export default function Home() {
         <h3 className="mb-3 font-medium text-xl text-secondary dark:text-primaryBtn italic">Featured works</h3>
 
       <div>
-        <ShowFromBottom className="flex flex-col divide-y-2 text-black dark:text-white">
+        <section className="flex flex-col divide-y-2 text-black dark:text-white">
             {Works?.slice(0, 2).map((work) => (
-              <div
+              <ShowFromBottom
                 className="flex flex-col md:flex-row gap-3 py-2 cursor-pointer"
                 key={work.id}
                 onClick={() => router.push(`/works/${work.id}`)}
@@ -134,9 +134,9 @@ export default function Home() {
                     </Link>
                   </div>
                 </div>
-              </div>
+              </ShowFromBottom>
             ))}
-          </ShowFromBottom>
+          </section>
           <Link
             href={"/works"}
             className="flex justify-center mt-3 text-primary font-medium text-center hover:underline dark:text-primaryBtn"
