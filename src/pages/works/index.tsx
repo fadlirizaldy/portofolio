@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 
 import { Icon } from "@iconify-icon/react";
 import MainLayout from "@/components/MainLayout";
@@ -12,12 +13,30 @@ const WorksPage = () => {
     <MainLayout title="Works | Fadli">
       <div className=" max-w-[1200px] w-[90%] mx-auto pt-7">
         <h2 className="font-extrabold text-2xl text-slate-500 dark:text-primaryBtn">Works</h2>
-        <div className="mt-5 flex flex-col gap-2 divide-y-2 text-black dark:text-white">
+        <motion.div
+          initial="hidden"
+          animate="show"
+          variants={{
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.3,
+              },
+            },
+          }}
+          className="mt-5 flex flex-col gap-2 divide-y-2 text-black dark:text-white"
+        >
           {Works?.map((work) => (
-            <div
+            <motion.div
               key={work.id}
               className="flex flex-col sm:flex-row gap-5 py-2 cursor-pointer group transition-all hover:-translate-y-1"
               onClick={() => router.push(`/works/${work.id}`)}
+              variants={{
+                hidden: { opacity: 0 },
+                show: { opacity: 1 },
+              }}
+              // transition={{ type: "spring", stiffness: 50 }}
             >
               <img
                 src={work.image}
@@ -53,9 +72,9 @@ const WorksPage = () => {
                   </Link>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </MainLayout>
   );

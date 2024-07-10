@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Icon } from "@iconify-icon/react";
 import { useRouter } from "next/router";
 import TextTransition, { presets } from "react-text-transition";
+import { motion } from "framer-motion";
 
 import MainLayout from "@/components/MainLayout";
 import ImageSlider from "@/components/imageSlider";
@@ -86,20 +87,22 @@ export default function Home() {
               ))}
             </ul>
           </div>
-          {/* <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}> */}
-          {/* </motion.div> */}
         </div>
       </div>
       <div className="h-full max-w-[1200px] w-[90%] mx-auto pt-3 pb-10">
         <h3 className="mb-3 font-medium text-xl text-secondary dark:text-primaryBtn italic">Featured works</h3>
 
-      <div>
-        <ShowFromBottom className="flex flex-col divide-y-2 text-black dark:text-white">
+        <div>
+          <ShowFromBottom className="flex flex-col divide-y-2 text-black dark:text-white">
             {Works?.slice(0, 2).map((work) => (
-              <div
+              <motion.div
                 className="flex flex-col md:flex-row gap-3 py-2 cursor-pointer"
                 key={work.id}
                 onClick={() => router.push(`/works/${work.id}`)}
+                variants={{
+                  hidden: { opacity: 0, y: 30, x: 0 },
+                  enter: { opacity: 1, y: 0, x: 0 },
+                }}
               >
                 <img
                   src={work.image}
@@ -134,7 +137,7 @@ export default function Home() {
                     </Link>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </ShowFromBottom>
           <Link
