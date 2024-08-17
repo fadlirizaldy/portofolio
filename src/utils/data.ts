@@ -1,4 +1,3 @@
-console.log("TEST GITHUB SSH");
 import { DataType, ExperienceType } from "./type";
 
 export const DataProfile = {
