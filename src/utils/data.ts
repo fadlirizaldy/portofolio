@@ -1,3 +1,4 @@
+console.log("TEST GITHUB SSH");
 import { DataType, ExperienceType } from "./type";
 
 export const DataProfile = {
@@ -79,7 +80,7 @@ export const Works: DataType[] = [
     title: "Quran Hub",
     image: "/img/quranhub.png",
     description:
-      'Quran Hub is your essential online Quran companion, providing access to the holy text anytime, anywhere. With Quran Hub, users can seamlessly navigate through the verses of the Quran, offering a digital platform that ensures accessibility and convenience. Whether at home, on the go, or during travels, Quran Hub empowers individuals to engage with the sacred teachings of Islam effortlessly. This app aims to foster spiritual growth and connection through its user-friendly interface, making the Quran accessible to all, whenever they seek solace, guidance, or reflection.',
+      "Quran Hub is your essential online Quran companion, providing access to the holy text anytime, anywhere. With Quran Hub, users can seamlessly navigate through the verses of the Quran, offering a digital platform that ensures accessibility and convenience. Whether at home, on the go, or during travels, Quran Hub empowers individuals to engage with the sacred teachings of Islam effortlessly. This app aims to foster spiritual growth and connection through its user-friendly interface, making the Quran accessible to all, whenever they seek solace, guidance, or reflection.",
     links: {
       github: "https://github.com/fadlirizaldy/quran-hub",
       live: "https://quran-hub-tau.vercel.app/",
