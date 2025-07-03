@@ -192,7 +192,7 @@ export const Experience: ExperienceType[] = [
   {
     id: 5,
     title: "Frontend Engineer",
-    company: "Astra Graphia Information Technology",
+    company: "PT Astra International Tbk",
     duration: "Apr 2024 - Now",
   },
   {

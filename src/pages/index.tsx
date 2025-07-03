@@ -13,11 +13,11 @@ import ShowFromBottom from "@/components/motion/Template";
 import ExperienceItem from "@/components/ExperienceItem";
 
 const handleDownloadClick = () => {
-  const pdfUrl = "/CV_Fadli Rizaldy_IT.pdf";
+  const pdfUrl = "/CV-Fadli Rizaldy-IT.pdf";
 
   const link = document.createElement("a");
   link.href = pdfUrl;
-  link.setAttribute("download", "Fadli_CV.pdf");
+  link.setAttribute("download", "Fadli Rizaldy_CV.pdf");
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
@@ -48,7 +48,10 @@ export default function Home() {
         <section className="w-full md:w-1/2 dark:text-white">
           <ShowInWhenVisible duration={0.5}>
             <h2 className="mb-2 text-2xl">
-              Hi, I am <span className="text-primary dark:text-primaryBtn font-medium">{DataProfile.name}</span>
+              Hi, I am{" "}
+              <span className="text-primary dark:text-primaryBtn font-medium">
+                {DataProfile.name}
+              </span>
             </h2>
           </ShowInWhenVisible>
           A{" "}
@@ -67,18 +70,26 @@ export default function Home() {
           </div>
         </section>
         <ShowInWhenVisible duration={1}>
-          <img src="/fadli-photo.jpg" alt="" className="w-48 h-48 rounded-full object-cover" />
+          <img
+            src="/fadli-photo.jpg"
+            alt=""
+            className="w-48 h-48 rounded-full object-cover"
+          />
         </ShowInWhenVisible>
       </div>
       <div className="max-w-[1200px] w-[90%] mx-auto mb-4 md:px-20">
-        <h2 className="text-center font-medium text-xl mb-2 dark:text-white">Skills</h2>
+        <h2 className="text-center font-medium text-xl mb-2 dark:text-white">
+          Skills
+        </h2>
         <ImageSlider />
       </div>
       <div className="bg-primary bg-opacity-20 min-h-56">
         <div className="h-full max-w-[1200px] w-[90%] mx-auto pt-3 pb-8">
           <div className="mb-3 flex gap-2">
             <div className="w-2 h-8 bg-primary dark:bg-primaryBtn rounded-md"></div>
-            <h3 className="font-medium text-xl text-secondary dark:text-primaryBtn italic">Experience</h3>
+            <h3 className="font-medium text-xl text-secondary dark:text-primaryBtn italic">
+              Experience
+            </h3>
           </div>
           <div className="flex sm:justify-center items-center mx-auto text-black dark:text-white">
             <ul className="steps steps-vertical gap-2 relative sm:left-32 overflow-visible">
@@ -90,7 +101,9 @@ export default function Home() {
         </div>
       </div>
       <div className="h-full max-w-[1200px] w-[90%] mx-auto pt-3 pb-10">
-        <h3 className="mb-3 font-medium text-xl text-secondary dark:text-primaryBtn italic">Featured works</h3>
+        <h3 className="mb-3 font-medium text-xl text-secondary dark:text-primaryBtn italic">
+          Featured works
+        </h3>
 
         <div>
           <ShowFromBottom className="flex flex-col divide-y-2 text-black dark:text-white">
@@ -112,10 +125,14 @@ export default function Home() {
                 <div>
                   <h4 className="font-medium text-xl">{work.title}</h4>
                   <div className="flex gap-4 items-center">
-                    <p className="px-2 rounded-2xl bg-primaryBtn text-sm text-white">{work.year}</p>
+                    <p className="px-2 rounded-2xl bg-primaryBtn text-sm text-white">
+                      {work.year}
+                    </p>
                     <p className="text-slate-500">{work.type}</p>
                   </div>
-                  <p className="line-clamp-2 dark:font-thin">{work.description}</p>
+                  <p className="line-clamp-2 dark:font-thin">
+                    {work.description}
+                  </p>
                   <div className="flex items-center gap-2 mt-2">
                     <Link
                       href={work.links.live ?? ""}
@@ -124,7 +141,11 @@ export default function Home() {
                       className="tooltip"
                       data-tip="Live"
                     >
-                      <Icon icon="fluent:live-20-filled" className="dark:text-slate-200 text-slate-600" width={24} />
+                      <Icon
+                        icon="fluent:live-20-filled"
+                        className="dark:text-slate-200 text-slate-600"
+                        width={24}
+                      />
                     </Link>
                     <Link
                       href={work.links.github ?? ""}
@@ -133,7 +154,11 @@ export default function Home() {
                       className="tooltip"
                       data-tip="Github"
                     >
-                      <Icon icon="mdi:github" className="dark:text-slate-200 text-slate-600" width={24} />
+                      <Icon
+                        icon="mdi:github"
+                        className="dark:text-slate-200 text-slate-600"
+                        width={24}
+                      />
                     </Link>
                   </div>
                 </div>
