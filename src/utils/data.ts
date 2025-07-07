@@ -75,7 +75,7 @@ export const Skill = [
 
 export const Works: DataType[] = [
   {
-    id: 0,
+    id: "quran-hub",
     title: "Quran Hub",
     image: "/img/quranhub.png",
     description:
@@ -89,11 +89,11 @@ export const Works: DataType[] = [
     type: "Frontend Development",
   },
   {
-    id: 1,
+    id: "varmasea-app",
     title: "Varmasea App",
     image: "/img/varmasea.png",
     description:
-      "Varmasea is a cutting-edge healthcare application designed to seamlessly integrate health and wellness into your lifestyle. With Varmasea, users can easily browse and purchase healthcare products through a convenient shopping cart feature, ensuring access to essential items with just a few clicks. Additionally, the app offers a revolutionary telemedicine experience, allowing users to engage in real-time chats with healthcare professionals",
+      "Varmasea is a cutting-edge healthcare application designed to seamlessly integrate health and wellness into your lifestyle. With Varmasea, users can easily browse and purchase healthcare products through a convenient shopping cart feature, ensuring access to essential items with just a few clicks. Additionally, the app offers a revolutionary telemedicine experience, allowing users to engage in real-time chats with healthcare professionals.",
     links: {
       github: "https://github.com/fadlirizaldy/varmasea",
       live: "",
@@ -103,7 +103,21 @@ export const Works: DataType[] = [
     type: "Frontend Development",
   },
   {
-    id: 2,
+    id: "kiwa-sandals",
+    title: "Kiwa Sandals",
+    image: "/img/kiwa-sandal.png",
+    description:
+      "A product-focused landing page for Kiwa Sandals, developed to highlight branding, catalog, and product appeal. Built with Next.js, TypeScript, and Tailwind CSS using DaisyUI for consistent component design.",
+    links: {
+      github: "https://github.com/fadlirizaldy/kiwasandals-fe",
+      live: "https://kiwasandals-fe.vercel.app/",
+    },
+    tech_stack: ["Next js", "Typescript", "Tailwind CSS"],
+    year: 2025,
+    type: "Frontend Development",
+  },
+  {
+    id: "jotter-app",
     title: "Jotter App",
     image: "/img/jotter.png",
     description:
@@ -117,7 +131,7 @@ export const Works: DataType[] = [
     type: "Frontend Development",
   },
   {
-    id: 3,
+    id: "pixel-news",
     title: "Pixel News",
     image: "/img/pixel-news.png",
     description:
@@ -131,7 +145,7 @@ export const Works: DataType[] = [
     type: "Frontend Development",
   },
   {
-    id: 4,
+    id: "tripease",
     title: "Tripease",
     image: "/img/tripease.png",
     description:
@@ -145,7 +159,7 @@ export const Works: DataType[] = [
     type: "Frontend Development",
   },
   {
-    id: 5,
+    id: "siakad",
     title: "SIAKAD",
     image: "/img/siakad.png",
     description:
@@ -159,11 +173,11 @@ export const Works: DataType[] = [
     type: "Frontend Development",
   },
   {
-    id: 6,
+    id: "cinemy",
     title: "Cinemy",
     image: "/img/cinemy.png",
     description:
-      "Cinemy caters to every cinematic taste. Whether you're in search of the hottest blockbusters or hidden gems, Cinemy provides easy access to an extensive library of entertainment. Experience the thrill of discovering new favorites and staying updated with the most recent releases",
+      "Cinemy caters to every cinematic taste. Whether you're in search of the hottest blockbusters or hidden gems, Cinemy provides easy access to an extensive library of entertainment. Experience the thrill of discovering new favorites and staying updated with the most recent releases.",
     links: {
       github: "https://github.com/fadlirizaldy/cinemy-next",
       live: "https://cinemy-next.vercel.app/",
@@ -173,7 +187,7 @@ export const Works: DataType[] = [
     type: "Frontend Development",
   },
   {
-    id: 7,
+    id: "echo-app",
     title: "Echo",
     image: "/img/echo.png",
     description:

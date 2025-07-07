@@ -14,7 +14,7 @@ const WorkDetail = () => {
 
   useEffect(() => {
     if (router.isReady) {
-      setData(Works[Number(id)]);
+      setData(Works.find((x) => x.id === id) as any);
     }
   }, [id]);
   return (
