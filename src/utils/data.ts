@@ -89,20 +89,6 @@ export const Works: DataType[] = [
     type: "Frontend Development",
   },
   {
-    id: "varmasea-app",
-    title: "Varmasea App",
-    image: "/img/varmasea.png",
-    description:
-      "Varmasea is a cutting-edge healthcare application designed to seamlessly integrate health and wellness into your lifestyle. With Varmasea, users can easily browse and purchase healthcare products through a convenient shopping cart feature, ensuring access to essential items with just a few clicks. Additionally, the app offers a revolutionary telemedicine experience, allowing users to engage in real-time chats with healthcare professionals.",
-    links: {
-      github: "https://github.com/fadlirizaldy/varmasea",
-      live: "",
-    },
-    tech_stack: ["Next js", "Typescript", "Tailwind CSS", "Daisy UI"],
-    year: 2024,
-    type: "Frontend Development",
-  },
-  {
     id: "kiwa-sandals",
     title: "Kiwa Sandals",
     image: "/img/kiwa-sandal.png",
@@ -114,6 +100,34 @@ export const Works: DataType[] = [
     },
     tech_stack: ["Next js", "Typescript", "Tailwind CSS"],
     year: 2025,
+    type: "Frontend Development",
+  },
+  {
+    id: "kaizen-billiard",
+    title: "Kaizen Billiard",
+    image: "/img/kaizen-billiard.png",
+    description:
+      "A product-focused landing page for Kaizen Billiard, designed to showcase premium pool tables with an emphasis on craftsmanship, innovation, and performance. Built using Next.js, TypeScript, and Tailwind CSS for a clean, responsive, and modern user experience.",
+    links: {
+      github: "https://github.com/zhaardhia/kaizen-billiard",
+      live: "https://kaizen-billiard.vercel.app/",
+    },
+    tech_stack: ["Next js", "Typescript", "Tailwind CSS"],
+    year: 2025,
+    type: "Frontend Development",
+  },
+  {
+    id: "varmasea-app",
+    title: "Varmasea App",
+    image: "/img/varmasea.png",
+    description:
+      "Varmasea is a cutting-edge healthcare application designed to seamlessly integrate health and wellness into your lifestyle. With Varmasea, users can easily browse and purchase healthcare products through a convenient shopping cart feature, ensuring access to essential items with just a few clicks. Additionally, the app offers a revolutionary telemedicine experience, allowing users to engage in real-time chats with healthcare professionals.",
+    links: {
+      github: "https://github.com/fadlirizaldy/varmasea",
+      live: "",
+    },
+    tech_stack: ["Next js", "Typescript", "Tailwind CSS", "Daisy UI"],
+    year: 2024,
     type: "Frontend Development",
   },
   {
