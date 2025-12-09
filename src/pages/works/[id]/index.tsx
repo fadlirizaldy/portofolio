@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Icon } from "@iconify-icon/react";
 
 import MainLayout from "@/components/MainLayout";
-import { Works } from "@/utils/data";
+import { Works, CompanyWorks } from "@/utils/data";
 import { DataType } from "@/utils/type";
 
 const WorkDetail = () => {
@@ -14,7 +14,9 @@ const WorkDetail = () => {
 
   useEffect(() => {
     if (router.isReady) {
-      setData(Works.find((x) => x.id === id) as any);
+      const WorksProject = Works.find((x) => x.id === id) as any;
+      const CompanyProject = CompanyWorks.find((x) => x.id === id) as any;
+      setData(WorksProject || CompanyProject);
     }
   }, [id]);
   return (

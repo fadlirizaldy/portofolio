@@ -16,13 +16,17 @@ const ThemeSwitcher = () => {
   }, [darkMode]);
 
   const toggleDarkMode = () => {
-    setDarkMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
+    setDarkMode((prevMode) =>
+      !prevMode || prevMode === "light" ? "dark" : "light"
+    );
   };
 
   return (
     <div className="sm:static absolute top-5 right-5">
       <DarkModeSwitch
-        checked={darkMode === null ? false : darkMode === "light" ? false : true}
+        checked={
+          darkMode === null ? false : darkMode === "light" ? false : true
+        }
         onChange={toggleDarkMode}
         size={30}
       />
