@@ -218,10 +218,16 @@ export const Works: DataType[] = [
 
 export const Experience: ExperienceType[] = [
   {
+    id: 6,
+    title: "Frontend Engineer",
+    company: "Prudential Indonesia",
+    duration: "Mei 2026 - Now",
+  },
+  {
     id: 5,
     title: "Frontend Engineer",
     company: "PT Astra International Tbk",
-    duration: "Apr 2024 - Now",
+    duration: "Apr 2024 - Apr 2026",
   },
   {
     id: 4,
