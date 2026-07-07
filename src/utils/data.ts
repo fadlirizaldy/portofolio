@@ -19,7 +19,7 @@ export const Skill = [
   {
     id: 1,
     name: "CSS",
-    url: "/logo/css.png",
+    url: "/logo/angular.png",
   },
   {
     id: 2,
@@ -39,7 +39,7 @@ export const Skill = [
   {
     id: 5,
     name: "Express",
-    url: "/logo/express.png",
+    url: "/logo/nest.svg",
   },
   {
     id: 6,
@@ -59,7 +59,7 @@ export const Skill = [
   {
     id: 9,
     name: "Skicit-learn",
-    url: "/logo/sklearn.png",
+    url: "/logo/ts.png",
   },
   {
     id: 10,
