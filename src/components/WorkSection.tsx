@@ -4,8 +4,6 @@ import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify-icon/react";
 
-import MainLayout from "@/components/MainLayout";
-import { CompanyWorks, Works } from "@/utils/data";
 import { DataType } from "@/utils/type";
 
 interface IWorkSectionProps {
@@ -16,6 +14,19 @@ interface IWorkSectionProps {
 const WorkSection: FC<IWorkSectionProps> = (props) => {
   const { title, data } = props;
   const router = useRouter();
+
+  const tagColor = (tag: string) => {
+    switch (tag) {
+      case "React":
+        return "bg-[#61DAFB] text-black";
+      case "Next.js":
+        return "bg-[#000000] text-white";
+      case "Tailwind CSS":
+        return "bg-[#38BDF8] text-black";
+      default:
+        return "bg-primaryBtn text-white";
+    }
+  };
 
   return (
     <div className=" max-w-[1200px] w-[90%] mx-auto py-7">
@@ -53,12 +64,18 @@ const WorkSection: FC<IWorkSectionProps> = (props) => {
               className="rounded-lg min-w-52 w-full sm:w-52 h-44 sm:h-32 object-cover"
             />
             <div>
-              <h4 className="font-medium text-xl dark:text-white ">
-                {work.title}
-              </h4>
+              <div className="flex gap-2 items-center">
+                <h4 className="font-medium text-xl dark:text-white ">
+                  {work.title}
+                </h4>
+                <p className="text-slate-400">•</p>
+                <p className="text-slate-400">{work.year}</p>
+              </div>
               <div className="flex gap-4 items-center">
-                <p className="px-2 rounded-2xl bg-primaryBtn text-sm text-white">
-                  {work.year}
+                <p
+                  className={`px-2 rounded-2xl text-sm text-white ${tagColor(work.tech_stack?.[0] || "")}`}
+                >
+                  {work.tech_stack?.[0]}
                 </p>
                 <p className="text-slate-400">{work.type}</p>
               </div>
