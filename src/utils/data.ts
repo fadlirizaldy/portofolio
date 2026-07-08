@@ -117,20 +117,6 @@ export const Works: DataType[] = [
     type: "Frontend Development",
   },
   {
-    id: "varmasea-app",
-    title: "Varmasea App",
-    image: "/img/varmasea.png",
-    description:
-      "Varmasea is a cutting-edge healthcare application designed to seamlessly integrate health and wellness into your lifestyle. With Varmasea, users can easily browse and purchase healthcare products through a convenient shopping cart feature, ensuring access to essential items with just a few clicks. Additionally, the app offers a revolutionary telemedicine experience, allowing users to engage in real-time chats with healthcare professionals.",
-    links: {
-      github: "https://github.com/fadlirizaldy/varmasea",
-      live: "",
-    },
-    tech_stack: ["Next.js", "TypeScript", "Tailwind CSS", "Daisy UI"],
-    year: 2024,
-    type: "Frontend Development",
-  },
-  {
     id: "jotter-app",
     title: "Jotter App",
     image: "/img/jotter.png",
@@ -159,34 +145,6 @@ export const Works: DataType[] = [
     type: "Frontend Development",
   },
   {
-    id: "tripease",
-    title: "Tripease",
-    image: "/img/tripease.png",
-    description:
-      "Tripease is a comprehensive mobile-based travel booking application that simplifies and enhances the travel planning experience with its user-friendly interface and diverse range of options.",
-    links: {
-      github: "https://github.com/fadlirizaldy/tripease-admin",
-      live: "https://tripease.my.id/",
-    },
-    tech_stack: ["React", "Tailwind CSS", "Cloudinary", "Jotai", "SWR"],
-    year: 2024,
-    type: "Frontend Development",
-  },
-  {
-    id: "siakad",
-    title: "SIAKAD",
-    image: "/img/siakad.png",
-    description:
-      "SIAKAD is a dummy integrated academic information system platform for students, offering efficient and transparent access to academic data, class schedules, and course information.",
-    links: {
-      github: "https://github.com/fadlirizaldy/varmasea",
-      live: "https://siakad-v1.vercel.app/",
-    },
-    tech_stack: ["React", "Tailwind CSS", "Graphql", "Redux"],
-    year: 2024,
-    type: "Frontend Development",
-  },
-  {
     id: "cinemy",
     title: "Cinemy",
     image: "/img/cinemy.png",
@@ -211,6 +169,48 @@ export const Works: DataType[] = [
       live: "https://echo-app-nine.vercel.app/",
     },
     tech_stack: ["React", "Tailwind CSS", "Redux"],
+    year: 2024,
+    type: "Frontend Development",
+  },
+  {
+    id: "varmasea-app",
+    title: "Varmasea App",
+    image: "/img/varmasea.png",
+    description:
+      "Varmasea is a cutting-edge healthcare application designed to seamlessly integrate health and wellness into your lifestyle. With Varmasea, users can easily browse and purchase healthcare products through a convenient shopping cart feature, ensuring access to essential items with just a few clicks. Additionally, the app offers a revolutionary telemedicine experience, allowing users to engage in real-time chats with healthcare professionals.",
+    links: {
+      github: "https://github.com/fadlirizaldy/varmasea",
+      live: "",
+    },
+    tech_stack: ["Next.js", "TypeScript", "Tailwind CSS", "Daisy UI"],
+    year: 2024,
+    type: "Frontend Development",
+  },
+  {
+    id: "tripease",
+    title: "Tripease",
+    image: "/img/tripease.png",
+    description:
+      "Tripease is a comprehensive mobile-based travel booking application that simplifies and enhances the travel planning experience with its user-friendly interface and diverse range of options.",
+    links: {
+      github: "https://github.com/fadlirizaldy/tripease-admin",
+      live: "https://tripease.my.id/",
+    },
+    tech_stack: ["React", "Tailwind CSS", "Cloudinary", "Jotai", "SWR"],
+    year: 2024,
+    type: "Frontend Development",
+  },
+  {
+    id: "siakad",
+    title: "SIAKAD",
+    image: "/img/siakad.png",
+    description:
+      "SIAKAD is a dummy integrated academic information system platform for students, offering efficient and transparent access to academic data, class schedules, and course information.",
+    links: {
+      github: "https://github.com/fadlirizaldy/varmasea",
+      live: "https://siakad-v1.vercel.app/",
+    },
+    tech_stack: ["React", "Tailwind CSS", "Graphql", "Redux"],
     year: 2024,
     type: "Frontend Development",
   },
