@@ -123,8 +123,8 @@ export const Works: DataType[] = [
     description:
       'Jotter is an intuitive note app designed to keep all your important reminders in one easily accessible space. With the tagline "Your virtual reminder space," it ensures you never miss a beat.',
     links: {
-      github: "https://github.com/fadlirizaldy/jotter-app",
-      live: "https://jotter-app-mu.vercel.app/",
+      github: "https://github.com/fadlirizaldy/jotter-v2",
+      live: "https://jotter-v2.vercel.app/",
     },
     tech_stack: ["React", "Tailwind CSS"],
     year: 2024,
