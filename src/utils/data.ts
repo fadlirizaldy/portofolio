@@ -131,20 +131,6 @@ export const Works: DataType[] = [
     type: "Frontend Development",
   },
   {
-    id: "pixel-news",
-    title: "Pixel News",
-    image: "/img/pixel-news.png",
-    description:
-      "Introducing Pixel News, your go-to destination for the latest and most exciting developments in the gaming world. Dive into the immersive universe of gaming with Pixel News, where users can stay informed about the hottest trends, releases, and industry insights through a visually engaging newspaper-style format. Unlock a premium experience by subscribing to our newspaper, gaining exclusive access to in-depth articles.",
-    links: {
-      github: "https://github.com/fadlirizaldy/Next-assignment-sealab",
-      live: "https://next-assignment-fadli.vercel.app/",
-    },
-    tech_stack: ["Next.js", "TypeScript", "Tailwind CSS"],
-    year: 2024,
-    type: "Frontend Development",
-  },
-  {
     id: "cinemy",
     title: "Cinemy",
     image: "/img/cinemy.png",
@@ -169,6 +155,20 @@ export const Works: DataType[] = [
       live: "https://echo-app-nine.vercel.app/",
     },
     tech_stack: ["React", "Tailwind CSS", "Redux"],
+    year: 2024,
+    type: "Frontend Development",
+  },
+  {
+    id: "pixel-news",
+    title: "Pixel News",
+    image: "/img/pixel-news.png",
+    description:
+      "Introducing Pixel News, your go-to destination for the latest and most exciting developments in the gaming world. Dive into the immersive universe of gaming with Pixel News, where users can stay informed about the hottest trends, releases, and industry insights through a visually engaging newspaper-style format. Unlock a premium experience by subscribing to our newspaper, gaining exclusive access to in-depth articles.",
+    links: {
+      github: "https://github.com/fadlirizaldy/Next-assignment-sealab",
+      live: "https://next-assignment-fadli.vercel.app/",
+    },
+    tech_stack: ["Next.js", "TypeScript", "Tailwind CSS"],
     year: 2024,
     type: "Frontend Development",
   },
@@ -207,11 +207,11 @@ export const Works: DataType[] = [
     description:
       "SIAKAD is a dummy integrated academic information system platform for students, offering efficient and transparent access to academic data, class schedules, and course information.",
     links: {
-      github: "https://github.com/fadlirizaldy/varmasea",
+      github: "https://github.com/fadlirizaldy/MiniProject_FadliRizaldy_ReactB",
       live: "https://siakad-v1.vercel.app/",
     },
     tech_stack: ["React", "Tailwind CSS", "Graphql", "Redux"],
-    year: 2024,
+    year: 2023,
     type: "Frontend Development",
   },
 ];
