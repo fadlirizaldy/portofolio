@@ -20,7 +20,7 @@ const WorkSection: FC<IWorkSectionProps> = (props) => {
       case "React":
         return "bg-[#61DAFB] text-black";
       case "Next.js":
-        return "bg-[#000000] text-white";
+        return "bg-[#111827] text-white dark:bg-[#1F2937] dark:text-[#F8FAFC]";
       case "Tailwind CSS":
         return "bg-[#38BDF8] text-black";
       default:

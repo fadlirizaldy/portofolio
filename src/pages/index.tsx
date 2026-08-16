@@ -37,10 +37,23 @@ export default function Home() {
             return index + 1;
           }
         }),
-      2000
+      2000,
     );
     return () => clearTimeout(intervalId);
   }, []);
+
+  const tagColor = (tag: string) => {
+    switch (tag) {
+      case "React":
+        return "bg-[#61DAFB] text-black";
+      case "Next.js":
+        return "bg-[#111827] text-white dark:bg-[#1F2937] dark:text-[#F8FAFC]";
+      case "Tailwind CSS":
+        return "bg-[#38BDF8] text-black";
+      default:
+        return "bg-primaryBtn text-white";
+    }
+  };
 
   return (
     <MainLayout>
@@ -123,12 +136,20 @@ export default function Home() {
                   className="rounded-lg min-w-32 w-full md:w-32 h-28 md:h-20 object-cover"
                 />
                 <div>
-                  <h4 className="font-medium text-xl">{work.title}</h4>
+                  <div className="flex gap-2 items-center">
+                    <h4 className="font-medium text-xl dark:text-white ">
+                      {work.title}
+                    </h4>
+                    <p className="text-slate-400">•</p>
+                    <p className="text-slate-400">{work.year}</p>
+                  </div>
                   <div className="flex gap-4 items-center">
-                    <p className="px-2 rounded-2xl bg-primaryBtn text-sm text-white">
-                      {work.year}
+                    <p
+                      className={`px-2 rounded-2xl text-sm text-white ${tagColor(work.tech_stack?.[0] || "")}`}
+                    >
+                      {work.tech_stack?.[0]}
                     </p>
-                    <p className="text-slate-500">{work.type}</p>
+                    <p className="text-slate-400">{work.type}</p>
                   </div>
                   <p className="line-clamp-2 dark:font-thin">
                     {work.description}
