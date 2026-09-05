@@ -7,6 +7,7 @@ export type DataType = {
   id: string;
   title: string;
   image: string;
+  images?: { id: number; caption: string; url: string }[];
   description: string;
   links: LinksType;
   tech_stack: string[];

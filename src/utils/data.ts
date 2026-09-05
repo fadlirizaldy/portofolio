@@ -119,7 +119,21 @@ export const Works: DataType[] = [
   {
     id: "attendance-app",
     title: "Attendance App",
-    image: "/img/attendance-app.png",
+    image: "/img/attendance-app/attendance-app.png",
+    images: [
+      { id: 0, caption: "Admin Page", url: "/img/attendance-app/admin-1.png" },
+      { id: 1, caption: "Admin Page", url: "/img/attendance-app/admin-2.png" },
+      {
+        id: 2,
+        caption: "Log User Page",
+        url: "/img/attendance-app/log-user.png",
+      },
+      {
+        id: 3,
+        caption: "Clock In Page",
+        url: "/img/attendance-app/clockin-2.png",
+      },
+    ],
     description:
       "Attendance App is a simple and efficient solution for managing attendance records. With a clean interface and robust features, it streamlines the process of tracking attendance for various events and meetings.",
     links: {
