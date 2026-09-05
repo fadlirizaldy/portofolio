@@ -48,19 +48,21 @@ const WorkDetail = () => {
                 Project details
               </p>
               <div className="flex items-center gap-2 mt-2">
-                <Link
-                  href={data?.links?.live ?? ""}
-                  onClick={(e) => e.stopPropagation()}
-                  target="_blank"
-                  className="tooltip"
-                  data-tip="Live"
-                >
-                  <Icon
-                    icon="fluent:live-20-filled"
-                    className="dark:text-slate-200 text-slate-600"
-                    width={24}
-                  />
-                </Link>
+                {data?.links?.live && (
+                  <Link
+                    href={data?.links?.live ?? ""}
+                    onClick={(e) => e.stopPropagation()}
+                    target="_blank"
+                    className="tooltip"
+                    data-tip="Live"
+                  >
+                    <Icon
+                      icon="fluent:live-20-filled"
+                      className="dark:text-slate-200 text-slate-600"
+                      width={24}
+                    />
+                  </Link>
+                )}
                 <Link
                   href={data?.links?.github ?? ""}
                   onClick={(e) => e.stopPropagation()}

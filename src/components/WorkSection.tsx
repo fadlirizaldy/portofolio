@@ -23,6 +23,8 @@ const WorkSection: FC<IWorkSectionProps> = (props) => {
         return "bg-[#111827] text-white dark:bg-[#1F2937] dark:text-[#F8FAFC]";
       case "Tailwind CSS":
         return "bg-[#38BDF8] text-black";
+      case "NestJS":
+        return "bg-[#E0234E] text-white";
       default:
         return "bg-primaryBtn text-white";
     }
@@ -82,19 +84,21 @@ const WorkSection: FC<IWorkSectionProps> = (props) => {
               <p className="line-clamp-2">{work.description}</p>
 
               <div className="flex items-center gap-2 mt-2">
-                <Link
-                  href={work.links.live ?? ""}
-                  onClick={(e) => e.stopPropagation()}
-                  target="_blank"
-                  className="tooltip"
-                  data-tip="Live"
-                >
-                  <Icon
-                    icon="fluent:live-20-filled"
-                    className="dark:text-slate-200 text-slate-600"
-                    width={24}
-                  />
-                </Link>
+                {work.links.live && (
+                  <Link
+                    href={work.links.live ?? ""}
+                    onClick={(e) => e.stopPropagation()}
+                    target="_blank"
+                    className="tooltip"
+                    data-tip="Live"
+                  >
+                    <Icon
+                      icon="fluent:live-20-filled"
+                      className="dark:text-slate-200 text-slate-600"
+                      width={24}
+                    />
+                  </Link>
+                )}
                 <Link
                   href={work.links.github ?? ""}
                   onClick={(e) => e.stopPropagation()}

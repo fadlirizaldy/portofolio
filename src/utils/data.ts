@@ -117,6 +117,20 @@ export const Works: DataType[] = [
     type: "Frontend Development",
   },
   {
+    id: "attendance-app",
+    title: "Attendance App",
+    image: "/img/attendance-app.png",
+    description:
+      "Attendance App is a simple and efficient solution for managing attendance records. With a clean interface and robust features, it streamlines the process of tracking attendance for various events and meetings.",
+    links: {
+      github: "https://github.com/fadlirizaldy/dexa",
+      live: "",
+    },
+    tech_stack: ["NestJS", "React", "MySQL", "Tailwind CSS"],
+    year: 2026,
+    type: "Fullstack Development",
+  },
+  {
     id: "jotter-app",
     title: "Jotter App",
     image: "/img/jotter.png",
